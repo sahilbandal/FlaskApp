@@ -280,7 +280,8 @@ function finalize(Name,Email,Password,CPassword,c)
 	else if(Password.value.length==0){alert("Please Enter Password");}
 	else if(CPassword.value.length==0){alert("Please Enter Confirm Password");}
 	else if(Password.value != CPassword.value){alert("Passwords not matching! Please Try Again!");}
-	else if(c.value!=0){alert("Please Accept All Terms& Conditions");}
+	else if(c.checked){}
+	else{alert("Please Accept All Terms& Conditions");}
 }
 </script>
 
