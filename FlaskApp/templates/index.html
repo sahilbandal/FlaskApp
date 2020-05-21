@@ -41,16 +41,16 @@ body {font-family: "Lato", sans-serif}
         <h2 class="w3-wide"><i class="w3-margin-right"></i>Sign Up and Start A Journey!</h2>
       </header>
       <div class="w3-container">
-        <p><label><i class="fa fa-user"></i></label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Full Name">
-		<p><label><i class="fa fa-envelope"></i></label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Email Id">
-		<p><label><i class="fa fa-key"></i></label></p>
 		<form>
-         <input class="w3-input w3-border" type="password" name=a placeholder="Password">
-		 <input class="w3-input w3-border" type="password" name=b placeholder="Confirm Password">
-         <input type="checkbox"><div class="w3-tiny">I have Accepted All Terms& Conditions..</div>
-		 <button class="w3-button w3-block w3-green w3-padding-16 w3-section w3-right" onclick="submit(a,b)">SIGN UP<i class="fa fa-check"></i></button>
+        <p><label><i class="fa fa-user"></i></label></p>
+        <input class="w3-input w3-border" type="text" name="Name" placeholder="Full Name">
+		<p><label><i class="fa fa-envelope"></i></label></p>
+        <input class="w3-input w3-border" type="text" name="Email" placeholder="Email Id">
+		<p><label><i class="fa fa-key"></i></label></p>
+         <input class="w3-input w3-border" type="password" name="Password" placeholder="Password">
+		 <input class="w3-input w3-border" type="password" name="CPassword" placeholder="Confirm Password">
+         <input type="checkbox" name="c"><div class="w3-tiny">I have Accepted All Terms& Conditions..</div>
+		 <button class="w3-button w3-block w3-green w3-padding-16 w3-section w3-right" onclick="finalize(Name,Email,Password,CPassword,c)">SIGN UP<i class="fa fa-check"></i></button>
         </form>
 		<button class="w3-button w3-red w3-section" onclick="document.getElementById('SignUp').style.display='none'">Close<i class="fa fa-remove"></i></button>
         <button class="w3-hover-blue w3-right" onclick="document.getElementById('help').style.display='block'">Need help?</button>
@@ -273,9 +273,14 @@ window.onclick = function(event) {
   }
 }
 
-function submit(a,b)
+function finalize(Name,Email,Password,CPassword,c)
 {
-	if(a.value != b.value){alert("Passwords not matching! Please Try Again!");}
+	if(Name.value.length==0){alert("Please Enter Name");}
+	else if(Email.value.length==0){alert("Please Enter Email Id");}
+	else if(Password.value.length==0){alert("Please Enter Password");}
+	else if(CPassword.value.length==0){alert("Please Enter Confirm Password");}
+	else if(Password.value != CPassword.value){alert("Passwords not matching! Please Try Again!");}
+	else if(c.value!=0){alert("Please Accept All Terms& Conditions");}
 }
 </script>
 
