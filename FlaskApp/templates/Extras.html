@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Extras</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+<div class="w3-bar w3-grey w3-card-4">
+<a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-red">HOME</a>
+
+<!-- Extras -->
+  <div class="w3-content" style="max-width:2000px max-height:500px;margin-top:46px">
+
+	  <!-- Automatic Slideshow Images -->
+  <div class="mySlides2 w3-display-container w3-center">
+    <img src="10.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>We are Rockstars</h3>   
+    </div>
+  </div>
+  <div class="mySlides2 w3-display-container w3-center">
+    <img src="7.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>We had the best time playing at Venice Beach!</h3>    
+    </div>
+  </div>
+  <div class="mySlides2 w3-display-container w3-center">
+    <img src="9.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>The atmosphere in New York is lorem ipsum.</h3>    
+    </div>
+  </div>
+  <div class="mySlides2 w3-display-container w3-center">
+    <img src="8.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Thank you, Chicago - A night we won't forget.</h3>    
+    </div>
+  </div>
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1500px" id="band">
+    <h2 class="w3-wide"><u><i>THE BAND</i></u></h2>
+    <p class="w3-opacity"><i>We are Rockstars</i></p>
+    <p class="w3-justify">The band was formed as a quartet by songwriter and former Hallé Orchestra percussionist Richard Witts in 1978, but later became a trio. Witts produced the band's recordings and sang on most of their releases, the occasional lead vocal being taken by Tony Friel or Andy Wilson. Although they never truly broke into the mainstream, their most successful song was 'XOYO' which came 41st in John Peel's Festive Fifty for 1982, which was the top 50 songs of the year as voted by the listeners. The song was an experiment to see whether John Cage's method of aleatoric composition could be successfully applied to popular music composition. XOYO also appeared on the Cherry Red compilation album Pillows & Prayers. The band broke up in 1983.
+	<p class="w3-justify">
+	Richard Witts is now a lecturer and has taught at the University of Edinburgh, Goldsmiths University in London and currently teaches at Edge Hill University in Lancashire. Andy Wilson is a club and radio DJ based mainly in Ibiza. Joe Mckechnie is a producer, remixer, and DJ based in Liverpool. He has released records on Acacia (Detroit), Ochre (UK), Blood (UK) and Aspro (Holland) amongst others. Recent remixes include Ladytron/ROC and Echo & the Bunnymen.  </div>
+	</div>
+ </div>
+</div>
+</div>
+
+</div>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex2 = 0;
+carousel2();
+
+function carousel2() {
+  var i;
+  var x = document.getElementsByClassName("mySlides2");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex2++;
+  if (myIndex2 > x.length) {myIndex2 = 1}    
+  x[myIndex2-1].style.display = "block";  
+  setTimeout(carousel2, 4000);    
+}
+</script>
+</body>
+</html>
